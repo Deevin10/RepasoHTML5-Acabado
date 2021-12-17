@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputs</title>
+</head>
+
+<!-- 
+    radio.- Permite seleccionar una única opción de una lista de opciones relacionadas
+
+    cheias opciones de una lista de ockbox.- Permite seleccionar varpciones relacionadas
+
+    select.- Crea una lista de opciones donde podemos sleccionar una o varias opciones
+
+    cada opción irá dentro de una e tiqueta <option></option>
+
+    Si tenemos muchas opciones podemos ordenarlas por categorías a través de la etiqueta <outgroup> con el atricuto label para nombrar la categoría
+ -->
+<body>
+    <h1>Elementos seleccionables</h1>
+    <form action="">
+        <h2>Género</h2>
+        <label>Masculino
+            <input type="radio" name="gender" value="masculino" checked>
+        </label>
+        <label>Femenino
+            <input type="radio" name="gender" value="femenino">
+        </label>
+        <label>Desconocido
+            <input type="radio" name="gender" value="desconocido">
+        </label>
+        
+    </form>
+
+    <hr>
+    <!-- para marcar uno por defecto se usa cheked 
+    
+    poner el value para saber el valor y el navegador lo reconozca-->
+
+    <form action="">
+    <label for="">
+        <input type="checkbox" name="languages" value="html" checked >
+        HTML
+    </label>
+    <label for="">
+        <input type="checkbox" name="languages" value="css" >
+        CSS
+    </label>
+    <label for="">
+        <input type="checkbox" name="languages" value="javascript" >
+        JAVASCRIPT
+    </label>
+    </form>
+    <hr>
+
+    <form action="">
+        <select name="" id="" multiple>
+            <!-- multiple es opcional, sirve para seleccionar multiples opciones a la vez,, si se borra multiple se podrá seleccionar de uno en uno -->
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+    </form>
+
+    <hr>
+
+    <form action="">
+        <select name="mascotas" id="">
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="hamster">Hamster</option>
+            <option value="conejo">Conejo</option>
+            <option value="ninfa">Ninfa</option>
+            <option value="canario">Canario</option>
+            <option value="serpiente">Serpiente</option>
+            <option value="iguana">Iguana</option>
+        </select>
+    </form>
+
+
+    <hr>
+    <!-- para poder poner ciertos option en grupos diferentes haremos lo siguiente -->
+
+    <form action="">
+        <select name="mascotas" id="">
+            <optgroup label="4 patas">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="hamster">Hamster</option>
+                <option value="conejo">Conejo</option>
+            </optgroup>
+                
+                <optgroup label="aves">
+
+                    <option value="ninfa">Ninfa</option>
+                    <option value="canario">Canario</option>
+                </optgroup>
+                
+                <optgroup label="reptiles">
+
+                    <option value="serpiente">Serpiente</option>
+                    <option value="iguana">Iguana</option>
+                </optgroup>
+        </select>
+    </form>
+
+<hr>
+
+    <!-- Datalist -->
+    <form action="">
+        <input type="list" list="pets">
+        <datalist id="pets">
+            <option value="perro"></option>
+            <option value="gato"></option>
+            <option value="hamster"></option>
+            <option value="conejo"></option>
+            <option value="ninfa"></option>
+            <option value="canario"></option>
+            <option value="serpiente"></option>
+            <option value="iguana"></option>
+        </datalist>
+    </form>
+
+
+    <hr>
+    <!-- Más elementos para un formulario -->
+
+    <!-- fieldset.- Se utiliza para agrupar elementos dentro de un formulario
+
+        legend.- representa una etiqueta para el contenido del fieldset
+
+        file.- este input se utiliza para cargar archivos y enviarlos desde un formulario
+        
+        meter.- representa un valor dentro de un rango conocido
+
+        progress.-representa el progreso de una tarea 
+        texarea.- se utiliza para introducir texto en un formulario
+        
+    -->
+
+    <form action="">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            
+            <section>
+                <label for="name">Nombre</label>
+                <input type="text" id="name">
+            </section>
+
+            <section>
+                <label for="surname">Apellidos</label>
+                <input type="text" id="surname">
+            </section>
+
+            <input type="file">
+            
+
+
+            <label for="fuel">Combustible</label>
+            <meter id="fuel" min="0" max="100" value="80" low="30" high="75" optimum="50">
+            </meter>
+        
+            <label for="task">Tarea 1</label>
+            <progress id="task" max="100" value="10"></progress>
+            
+            <hr>
+
+            <label for="message">Mensaje</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </fieldset>
+    </form>
+
+
+</body>
+</html>

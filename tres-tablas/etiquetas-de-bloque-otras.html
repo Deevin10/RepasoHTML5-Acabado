@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas de Bloque</title>
+</head>
+
+<!-- 
+    address .- Se utiliza para aportar información de contacto para el article más cercano o para todo el body
+
+    blockquote .- Se utiliza para marcar las citas a otros autores o documentos. Se puede incluir el atributo cite para poner un enlace al documento original o fuente
+
+    pre .- Se utiliza para tener código preformateado que necesita ser representado igual que se escribió.
+
+    div .- Se usa como división del documento, sémanticamente no significa nada, es un contenedor genérico que se usa generalmente para dar estilos a través de css o para usar algo denominado "delegación  de eventos" en javascript
+    pero, hoy en dia ya no se usan los div para dar estilos en  css
+
+    hr.- horizontal rule,  se utiliza para decirle al navegador que vamos a cambiar de tema
+
+ -->
+<body>
+    <address>
+        Tony Stark <br>
+        Malibú 10880 <br>
+        90265 <br>
+        California <br>
+    </address>
+
+
+    <!-- No és ningun enlace, ni se puede hacer click, es únicamente para que lo reconozca el navegador que la frase ha sido cogida de otra página -->
+    <blockquote cite="https://www.psicoactiva.com/blog/frases-de-la-vida-para-reflexionar/">
+        <p>
+            No se puede hacer nada para cambiar lo que ya pasó, pero sí se puede hacer mucho para cambiar lo que viene.
+        </p>
+    </blockquote>
+
+
+
+
+    <!-- 
+        se usa para visualizar igual que lo escribes
+     -->
+    <pre>
+                        Hola,
+    ¿Qué tal, tú?
+    </pre>
+
+    <div>
+        <h2>Nombre</h2>
+        <p>Email</p>
+        <p>Description</p>
+    </div>
+
+    <hr>
+    <!-- No sirve para dibujar lineas, sirve para cambiar de tema de contexto -->
+</body>
+</html>

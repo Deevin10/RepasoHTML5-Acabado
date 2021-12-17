@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Píxel Ratio</title>
+</head>
+<body>
+    
+    
+    <!-- DPR device pixel ratio 
+
+        es la relación que existe entre los píxeles reales que tiene el dispositivo y los píxeles que tenemos disponibles para "pintar" contenido
+        
+        DPR= píxeles reales / píxeles disponibles
+        
+        whatismyviewport.com
+    
+    -->
+
+    <img src="./assets/images/gollum.jpg" width="300" alt="cuadro de gollum">
+
+    
+LO PERFECTO!
+Que la empresa tenga en posesión las fotos. Y que esten decentes.
+Fotógrafo
+Bancos de imágenes (3€ x foto)
+Fotos caseras (fotos o las hace la propia empresa)
+(en todas estas opciones tenemos TODO el control, el copywright)
+RETINA DISPLAY
+
+PICTURE
+      <picture>
+        <!-- smartphone -->
+        <source
+          srcset="
+            img/smartphone/banner_cafe.jpg 1x,
+            img/smartphone/banner_cafe@2x.jpg 2x,
+            img/smartphone/banner_cafe@3x.jpg 3x
+          "
+          media="(min-width:300px) and (max-width:450px) and (orientation: portrait)"
+        />
+
+        <!-- ipad -->
+        <source
+          srcset="img/tablet/banner_naranjas.jpg 1x, img/tablet/banner_naranjas@2x.jpg 2x"
+          media="(min-width:768px) and (max-width:1024px) and (orientation: portrait)"
+        />
+
+        <!-- escritorio -->
+        <source
+          srcset="
+            img/desktop/banner_muffi.jpg    1x,
+            img/desktop/banner_muffi@2x.jpg 2x
+          "
+          media="(min-width:1200px)"
+        />
+
+        <!-- Imagen de respaldo -->
+        <img src="" alt="banner" />
+      </picture>
+</body>
+</html>
